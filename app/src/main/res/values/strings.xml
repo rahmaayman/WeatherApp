@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="title_home">Home</string>
+    <string name="title_alerts">Alerts</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="title_settings">Settings</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="speed_wind">Wind</string>
+    <string name="cloud">Cloud</string>
+    <string name="_24_hours">24 Hours Forecast</string>
+    <string name="_7_days_forecast">7 Days Forecast</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location">Location</string>
+    <string name="allow_location">Allow app to get your location</string>
+    <string name="notification_and_alert">Notification and Alert</string>
+    <string name="alert">Alert</string>
+    <string name="notification_alert">Notification Alert</string>
+    <string name="units">Units</string>
+    <string name="unit_system">Unit System</string>
+    <string name="language">Language</string>
+    <string name="lang_system">Language System</string>
+    <string name="system_language">System Language</string>
+    <string name="saturday" translatable="false">Saturday</string>
+    <string name="sunday" translatable="false">Sunday</string>
+    <string name="monday" translatable="false">Monday</string>
+    <string name="tuesday" translatable="false">Tuesday</string>
+    <string name="wednesday" translatable="false">Wednesday</string>
+    <string name="friday" translatable="false">Friday</string>
+    <string name="thursday" translatable="false">Thursday</string>
+    <string name="feels_like">Feels like</string>
+    <string name="from_time">From time</string>
+    <string name="to_time">To time</string>
+    <string name="date">Date</string>
+    <string name="type_of_event">Event</string>
+    <string name="notification">Notification</string>
+    <string name="alarm">Alarm</string>
+    <string name="add_alert">Add Alert</string>
+    <string name="description">Description</string>
+    <string name="device_location_summary">The location for which the weather is displayed</string>
+
+    <string-array name="event_options">
+        <item>Rain</item>
+        <item>snow</item>
+        <item>fog</item>
+        <item>thunderstorm</item>
+        <item>cloud</item>
+        <item>wind</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.weatherapp.ui.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.example.weatherapp.ui.fragments.FavouritesFragment"
+        android:label="@string/title_favourites"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_favourite_fragment_to_map_fragment"
+            app:destination="@+id/navigation_map"/>
+        <action
+            android:id="@+id/action_favourite_fragment_to_favourite_details_fragment"
+            app:destination="@+id/navigation_favourite_details"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.weatherapp.ui.fragments.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_favoriteFragment"
+            app:destination="@id/navigation_favourite" />
+        <action
+            android:id="@+id/action_Fragment_to_home_Fragment"
+            app:destination="@id/navigation_home"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_favourite_details"
+        android:name="com.example.weatherapp.ui.fragments.FavouriteDetailsFragment"
+        android:label="favouriteDetails"
+        tools:layout="@layout/fragment_favourite_details" />
+
+    <fragment
+        android:id="@+id/navigation_alerts"
+        android:name="com.example.weatherapp.ui.fragments.AlertsFragment"
+        android:label="@string/title_alerts"
+        tools:layout="@layout/fragment_alerts">
+        <action android:id="@+id/action_alert_fragment_to_add_elert_Fragment"
+            app:destination="@+id/navigation_add_alert_fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_add_alert_fragment"
+        android:name="com.example.weatherapp.ui.fragments.AddAlarmFragment"
+        android:label="Add Alert Fragment"
+        tools:layout="@layout/fragment_add_alarm">
+        <action android:id="@+id/action_add_alert_fragment_to_alert_fragment"
+            app:destination="@id/navigation_alerts"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.weatherapp.ui.fragments.SettingFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_settingsFragment_to_mapFragment"
+            app:destination="@id/navigation_map"/>
+    </fragment>
+</navigation>

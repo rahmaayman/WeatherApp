@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/location"
+        android:icon="@drawable/ic_location">
+        <SwitchPreference
+            app:disableDependentsState="true"
+            android:key="USE_DEVICE_LOCATION"
+            android:summary="@string/allow_location"
+            android:defaultValue="true"
+            />
+        <Preference
+            android:dependency="USE_DEVICE_LOCATION"
+            android:key="CUSTOM_LOCATION"
+            android:title="@string/location"
+            android:summary="@string/device_location_summary"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/units"
+        android:icon="@drawable/ic_unit">
+        <ListPreference
+            android:defaultValue="METRIC"
+            android:entries="@array/unitSystemEntries"
+            android:entryValues="@array/unitSystemValues"
+            android:key="UNIT_SYSTEM"
+            android:title="@string/unit_system"
+            android:summary="%s"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/language"
+        android:icon="@drawable/ic_language">
+        <ListPreference
+            android:defaultValue="En"
+            android:entries="@array/langSystemEntries"
+            android:entryValues="@array/langSystemValues"
+            android:key="LANGUAGE_SYSTEM"
+            android:title="@string/lang_system"
+            android:summary="@string/system_language"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
